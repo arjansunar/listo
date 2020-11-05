@@ -1,0 +1,21 @@
+.ImageContainer {
+    height: 13rem;
+    width: 10rem;
+    margin-bottom: 10px;
+    border-radius: 0.3rem;
+    flex: 1;
+}
+.ImgWrapper{
+    display: flex ;
+    margin: 15px 7px ;
+    flex-direction: column;
+    height: 15rem;
+    width: 10rem;
+    overflow: hidden;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ImageTitle{
+    flex: 0;
+    height: 1.5rem;
+}

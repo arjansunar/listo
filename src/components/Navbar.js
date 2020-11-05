@@ -3,17 +3,26 @@ import "./styles/navbar.css";
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import { Button, FormControl } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
+import { useDispatch } from "react-redux"
+import { searchRequest, searchSuccess, searchFailure } from '../features/Search/searchSlice'
 
 function Navbar() {
 
+    const dispatch = useDispatch()
     const [input, setInput] = useState("");
 
     const formSubmit = async (event) => {
         event.preventDefault()
         const search_term = input;
-        const request = await fetch(process.env.API_URL);
-        const data = await request.json();
-        console.log(data.results);
+        try {
+            dispatch(searchRequest())
+            const request = await fetch(`https://api.jikan.moe/v3/search/anime?q=${search_term}&page=1`);
+            const data = await request.json();
+            dispatch(searchSuccess(data.results))
+
+        } catch (error) {
+            dispatch(searchFailure(error))
+        }
     }
     return (
         <nav className="navbar__nav">

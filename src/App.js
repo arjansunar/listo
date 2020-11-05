@@ -7,11 +7,11 @@ import RightSidebar from "./components/RightSidebar";
 function App() {
   return (
     <div className="app">
-         <Navbar />
-         <main>
-            <LeftSidebar />
-            <RightSidebar />
-         </main>
+      <Navbar />
+      <main className="app__main">
+        <LeftSidebar />
+        <RightSidebar />
+      </main>
     </div>
   );
 }
