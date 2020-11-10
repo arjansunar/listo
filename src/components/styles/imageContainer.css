@@ -1,5 +1,5 @@
 .ImageContainer {
-    height: 13rem;
+    height: 92%;
     width: 10rem;
     margin-bottom: 10px;
     border-radius: 0.3rem;
@@ -7,6 +7,7 @@
 }
 .ImgWrapper{
     display: flex ;
+    border-radius: 0.3rem;
     margin: 15px 7px ;
     flex-direction: column;
     height: 15rem;
@@ -17,5 +18,5 @@
 }
 .ImageTitle{
     flex: 0;
-    height: 1.5rem;
+    height: 8%;
 }

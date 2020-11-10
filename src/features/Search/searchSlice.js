@@ -5,25 +5,29 @@ export const searchSlice = createSlice({
     initialState: {
         loading: null,
         data: [],
-        error: ''
+        error: '',
+        showSearchResults: false
     },
     reducers: {
         searchRequest: state => {
-
             state.loading = true;
         },
         searchSuccess: (state, action) => {
             state.loading = false
             state.data = action.payload
+            state.showSearchResults = true
         },
         searchFailure: (state, action) => {
             state.error = action.payload
+        },
+        hideSearchResults: (state) => {
+            state.showSearchResults = false
         }
 
     },
 });
 
-export const { searchRequest, searchSuccess, searchFailure } = searchSlice.actions;
+export const { searchRequest, searchSuccess, searchFailure, hideSearchResults } = searchSlice.actions;
 
 
 

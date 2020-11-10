@@ -5,7 +5,9 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.navbar__RouterLinks{
+  text-decoration: none;
+}
 .navbar__logo {
   color: #653ba1;
   font-size: 3rem;
