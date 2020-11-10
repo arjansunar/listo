@@ -1,9 +1,10 @@
 import React from 'react'
+import MainInfoContainer from '../components/MainInfoContainer'
 
 function Home() {
     return (
         <div>
-            Home
+            <MainInfoContainer />
         </div>
     )
 }

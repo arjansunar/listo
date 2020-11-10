@@ -1,9 +1,9 @@
 import React from 'react'
 import "./styles/imageContainer.css"
-function ImagesContainer({ alt, imageUrl, title }) {
+function ImagesContainer({ imageUrl, title }) {
     return (
         <div className="ImgWrapper" >
-            <img alt={alt} className="ImageContainer" src={imageUrl} />
+            <img alt={title} className="ImageContainer" src={imageUrl} />
             <p className="ImageTitle">{title}</p>
         </div>
     )

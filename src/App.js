@@ -1,7 +1,5 @@
 import './App.css';
 import Navbar from "./components/Navbar";
-import LeftSidebar from "./components/LeftSidebar";
-import RightSidebar from "./components/RightSidebar";
 import { Switch, Route } from "react-router-dom"
 import Home from "./pages/Home";
 import Anime from "./pages/Anime"
@@ -11,14 +9,11 @@ function App() {
     <div className="app">
       <Navbar />
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/anime" component={Anime} />
+        {/* <Route path="/" exact component={Home} /> */}
+        <Route path="/anime/:mal_id" component={Anime} />
         <Route path="/" component={Home} />
       </Switch>
-      <main className="app__main">
-        <LeftSidebar />
-        <RightSidebar />
-      </main>
+
     </div>
   );
 }

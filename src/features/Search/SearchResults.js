@@ -17,15 +17,15 @@ function SearchResults() {
                 data.map((result) => {
                     return (
                         <div key={result.mal_id}>
-                            <Link to="/anime" style={{ textDecoration: "none" }} onClick={() => dispatch(hideSearchResults())}>
-                                <ImageContainer alt={result.title} imageUrl={result.image_url} title={result.title} />
+                            <Link to={`/anime/${result.mal_id}`} style={{ textDecoration: "none" }} onClick={() => dispatch(hideSearchResults())}>
+                                <ImageContainer imageUrl={result.image_url} title={result.title} />
                             </Link>
 
                         </div>
                     )
                 }) : null
             }
-        </div>
+        </div >
     )
 }
 
